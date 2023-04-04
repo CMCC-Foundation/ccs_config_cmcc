@@ -127,8 +127,8 @@
       <directive                       > -J {{ job_id }} </directive>
       <directive                       > -n {{ total_tasks }} </directive>
       <directive                       > -W $JOB_WALLCLOCK_TIME </directive>
-      <directive > -o {{ job_id }}.%J  </directive>
-      <directive > -e {{ job_id }}.%J  </directive>
+      <directive > -o {{ job_id }}.out.%J  </directive>
+      <directive > -e {{ job_id }}.err.%J  </directive>
     </directives>
   </batch_system>
 
@@ -761,6 +761,8 @@
       <queue walltimemin="00:00" walltimemax="02:00" default="true">p_short</queue>
       <queue walltimemin="02:00" walltimemax="04:00">p_medium</queue>
       <queue walltimemin="04:00" walltimemax="08:00">p_long</queue>
+      <queue walltimemin="00:00" walltimemax="00:30">s_short</queue>
+      <queue walltimemin="00:30" walltimemax="06:00">s_medium</queue>
     </queues>
   </batch_system>
 

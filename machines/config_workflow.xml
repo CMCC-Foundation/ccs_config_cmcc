@@ -51,7 +51,7 @@
     <job name="case.nemo_rebuild">
       <template>$NEMO_REBUILD_ROOT/template.nemo_rebuild4cmcc-cm</template>
       <dependency>case.st_archive</dependency>
-      <prereq>$BUILD_COMPLETE and $NEMO_REBUILD</prereq>
+      <prereq>$NEMO_REBUILD</prereq>
       <runtime_parameters>
 	        <task_count>1</task_count>
         	<tasks_per_node>1</tasks_per_node>

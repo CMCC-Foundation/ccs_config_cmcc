@@ -121,8 +121,8 @@ This allows using a different mpirun command to launch unit tests
     <OS>LINUX</OS>
     <COMPILERS>intel,intel15</COMPILERS>
     <MPILIBS>mpich2</MPILIBS>
-    <CIME_OUTPUT_ROOT>/work/$USER/CESM2</CIME_OUTPUT_ROOT>
-    <DIN_LOC_ROOT>/users/home/dp16116/CESM2/inputdata</DIN_LOC_ROOT>
+    <CIME_OUTPUT_ROOT>/work/$USER/CMCC-CM</CIME_OUTPUT_ROOT>
+    <DIN_LOC_ROOT>$ENV{CESMDATAROOT}/inputdata</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>$DIN_LOC_ROOT/atm/datm7</DIN_LOC_ROOT_CLMFORC>
     <DOUT_S_ROOT>$CIME_OUTPUT_ROOT/archive/$CASE</DOUT_S_ROOT>
     <BASELINE_ROOT>$ENV{CESMDATAROOT}/ccsm_baselines</BASELINE_ROOT>
@@ -3687,6 +3687,7 @@ This allows using a different mpirun command to launch unit tests
     <MPILIBS>impi,mpi-serial</MPILIBS>
     <PROJECT>R000</PROJECT>
     <CIME_OUTPUT_ROOT>/work/$ENV{DIVISION}/$ENV{USER}/CESM2</CIME_OUTPUT_ROOT>
+    <NEMO_REBUILD_ROOT>$ENV{HOME}/NEMO_REBUILD</NEMO_REBUILD_ROOT>
     <DIN_LOC_ROOT>$ENV{CESMDATAROOT}/inputdata</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>$DIN_LOC_ROOT/atm/datm7</DIN_LOC_ROOT_CLMFORC>
     <DOUT_S_ROOT>$CIME_OUTPUT_ROOT/archive/$CASE</DOUT_S_ROOT>

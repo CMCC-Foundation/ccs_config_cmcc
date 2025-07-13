@@ -2319,7 +2319,7 @@ This allows using a different mpirun command to launch unit tests
       </modules> 
     </module_system>
     <environment_variables>
-      <env name="XIOS_PATH">$ENV{XIOS_ROOT}</env>
+      <env name="XIOS_ROOT_PATH">$ENV{XIOS_ROOT}</env>
     </environment_variables>
     <environment_variables comp_interface="nuopc">
       <env name="ESMF_RUNTIME_PROFILE">ON</env>

@@ -179,8 +179,7 @@
       <directive> --job-name={{ job_id }}</directive>
       <directive> --nodes={{ num_nodes }}</directive>
       <directive> --ntasks-per-node={{ tasks_per_node }}</directive>
-      <directive> --output={{ job_id }}.%J.out   </directive>
-      <directive> --error={{ job_id }}.%J.err   </directive>
+      <directive> --output={{ job_id }}   </directive>
       <directive> --exclusive             </directive>
     </directives>
   </batch_system>
@@ -525,6 +524,22 @@
     </submit_args>
     <directives>
       <directive> -M 300GB </directive>
+      <directive> -R "span[ptile={{ tasks_per_node }}]" </directive>
+    </directives>
+    <queues>
+      <queue walltimemin="00:00" walltimemax="02:00" default="true">p_short</queue>
+      <queue walltimemin="02:00" walltimemax="04:00">p_medium</queue>
+      <queue walltimemin="04:00" walltimemax="08:00">p_long</queue>
+    </queues>
+  </batch_system>
+
+  <batch_system MACH="cassandra" type="lsf">
+    <batch_env>-env</batch_env>
+    <submit_args>
+      <argument> -P $PROJECT </argument>
+    </submit_args>
+    <directives>
+      <directive> -M 500GB </directive>
       <directive> -R "span[ptile={{ tasks_per_node }}]" </directive>
     </directives>
     <queues>

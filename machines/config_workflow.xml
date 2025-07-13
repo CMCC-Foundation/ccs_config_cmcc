@@ -57,6 +57,11 @@
                 <tasks_per_node>1</tasks_per_node>
                 <walltime>1:00:00</walltime>
       </runtime_parameters>
+      <runtime_parameters MACH="cassandra">
+                <task_count>1</task_count>
+                <tasks_per_node>1</tasks_per_node>
+                <walltime>1:00:00</walltime>
+      </runtime_parameters>
     </job>
   </workflow_jobs>
 

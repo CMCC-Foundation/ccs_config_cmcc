@@ -1,0 +1,10 @@
+if (MPILIB STREQUAL impi)
+  string(APPEND FFLAGS " -qmkl=cluster -march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -no-fma ")
+  string(APPEND CFLAGS " -qmkl=cluster -march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -no-fma ")
+  #string(APPEND SLIBS " -qmkl=cluster -lstdc++ -l:libparmetis.a -l:libmetis.a ")
+  string(APPEND SLIBS " -qmkl=cluster ")
+endif()
+set(MPICC "mpiicx")
+set(MPICXX "mpiicpx")
+set(MPIFC "mpiifx")
+

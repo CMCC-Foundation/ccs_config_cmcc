@@ -2303,13 +2303,13 @@ This allows using a different mpirun command to launch unit tests
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/netcdf-c/4.9.2-n5ufg</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/netcdf-fortran/4.6.1-vcy3j</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/parallel-netcdf/1.14.0-5pihb</command>
-          <command name="load">oneapi-2025.0.4/impi-2021.14.2/xios/2.6-necu7</command>
-          <!-- <command name="load">oneapi-2025.0.4/impi-2021.14.2/parallelio/2.6.3-heoxy</command> --> 
+          <command name="load">oneapi-2025.0.4/impi-2021.14.2/xios-prod/2.6-7cjuq</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/parmetis/4.0.3-m6qhh</command>
           <command name="load">oneapi-2025.0.4/perl-xml-libxml/2.0210-szkkj</command>
           <command name="load">oneapi-2025.0.4/perl-xml-sax-base/1.09-hzmjc</command>
           <command name="load">oneapi-2025.0.4/cmake/3.31.5-5aqrp</command>
           <command name="load">oneapi-2025.0.4/py-setuptools/69.2.0-cuj2e</command>
+          <command name="load">oneapi-2025.0.4/blitz/1.0.2-43urb</command>
       </modules>
       <modules compiler="intel" DEBUG="TRUE"> 
         <command name="load">oneapi-2025.0.4/impi-2021.14.2/esmf-debug/8.8.0-64ynz</command>  

@@ -130,8 +130,8 @@
     <directives>
       <directive                       > -J {{ job_id }} </directive>
       <directive                       > -n {{ total_tasks }} </directive>
-      <directive default="cesm.stdout" > -o {{ job_id }}.%J  </directive>
-      <directive default="cesm.stderr" > -e {{ job_id }}.%J  </directive>
+      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
+      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
     </directives>
   </batch_system>
 
@@ -525,8 +525,6 @@
     <directives>
       <directive> -M 300GB </directive>
       <directive> -R "span[ptile={{ tasks_per_node }}]" </directive>
-      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
-      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
     </directives>
     <queues>
       <queue walltimemin="00:00" walltimemax="02:00" default="true">p_short</queue>
@@ -543,8 +541,6 @@
     <directives>
       <directive> -M 500GB </directive>
       <directive> -R "span[ptile={{ tasks_per_node }}]" </directive>
-      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
-      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
     </directives>
     <queues>
       <queue walltimemin="00:00" walltimemax="02:00" default="true">p_short</queue>
@@ -813,8 +809,6 @@
     </submit_args>
     <directives>
       <directive> -R "span[ptile={{ tasks_per_node }}]" </directive>
-      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
-      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
     </directives>
     <queues>
       <queue walltimemin="00:00" walltimemax="02:00" default="true">p_short</queue>

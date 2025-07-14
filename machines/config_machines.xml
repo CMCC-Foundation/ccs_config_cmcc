@@ -2303,7 +2303,7 @@ This allows using a different mpirun command to launch unit tests
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/netcdf-c/4.9.2-n5ufg</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/netcdf-fortran/4.6.1-vcy3j</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/parallel-netcdf/1.14.0-5pihb</command>
-          <command name="load">oneapi-2025.0.4/impi-2021.14.2/xios-prod/2.6-7cjuq</command>
+          <command name="load">oneapi-2025.0.4/impi-2021.14.2/xios/2.6-m6i2q</command>
           <command name="load">oneapi-2025.0.4/impi-2021.14.2/parmetis/4.0.3-m6qhh</command>
           <command name="load">oneapi-2025.0.4/perl-xml-libxml/2.0210-szkkj</command>
           <command name="load">oneapi-2025.0.4/perl-xml-sax-base/1.09-hzmjc</command>
@@ -2319,7 +2319,7 @@ This allows using a different mpirun command to launch unit tests
       </modules> 
     </module_system>
     <environment_variables>
-      <env name="XIOS_PATH">$ENV{XIOS_PROD_ROOT}</env>
+      <env name="XIOS_PATH">$ENV{XIOS_ROOT}</env>
     </environment_variables>
     <environment_variables comp_interface="nuopc">
       <env name="ESMF_RUNTIME_PROFILE">ON</env>

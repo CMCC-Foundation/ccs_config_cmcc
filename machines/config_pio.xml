@@ -86,13 +86,14 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="OCN_PIO_STRIDE">
     <values>
       <value grid="a%ne120.+oi%gx1">60</value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="OCN_PIO_ROOT">
@@ -118,13 +119,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="LND_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="LND_PIO_ROOT">
@@ -150,13 +151,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="ROF_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="ROF_PIO_ROOT">
@@ -182,13 +183,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="ICE_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="ICE_PIO_ROOT">
@@ -214,13 +215,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="ATM_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="ATM_PIO_ROOT">
@@ -260,13 +261,13 @@
     </values>
   </entry>
 
-  <!--- uncomment and fill in relevant sections
   <entry id="CPL_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="CPL_PIO_ROOT">
@@ -292,13 +293,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="GLC_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="GLC_PIO_ROOT">
@@ -324,13 +325,13 @@
   </entry>
   -->
 
-  <!--- uncomment and fill in relevant sections
   <entry id="WAV_PIO_STRIDE">
     <values>
-      <value></value>
+      <value mach="leonardo">28</value>
+      <value mach="leonardodev">28</value>
+      <value mach="juno">18</value>
     </values>
   </entry>
-  -->
 
   <!--- uncomment and fill in relevant sections
   <entry id="WAV_PIO_ROOT">

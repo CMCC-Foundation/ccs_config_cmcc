@@ -949,6 +949,13 @@
     <mask>gx1v6</mask>
   </model_grid>
 
+  <model_grid alias="ne60_ne60_mn0253" not_compset="_NEMO">
+    <grid name="atm">ne60np4</grid>
+    <grid name="lnd">ne60np4</grid>
+    <grid name="ocnice">ne60np4</grid>
+    <mask>tn0.25v3</mask>
+  </model_grid>
+
   <model_grid alias="ne120_g16">
     <grid name="atm">ne120np4</grid>
     <grid name="lnd">ne120np4</grid>

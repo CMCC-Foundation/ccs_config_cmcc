@@ -10,6 +10,7 @@
     <grid name="rof"       compset="DWAV"        >rx1</grid>
     <grid name="rof"       compset="RTM"         >r05</grid>
     <grid name="rof"       compset="MOSART"      >r05</grid>
+    <grid name="rof"       compset="HYDROS"      >r05</grid>
     <grid name="rof"       compset="MIZUROUTE"   >r05mz</grid>
     <grid name="rof"       compset="DROF"        >rx1</grid>
     <grid name="rof"       compset="DROF%CPLHIST">r05</grid>
@@ -580,6 +581,13 @@
     <mask>gx1v7</mask>
   </model_grid>
 
+  <model_grid alias="f05_n0253" not_compset="_MOM">
+    <grid name="atm">0.47x0.63</grid>
+    <grid name="lnd">0.47x0.63</grid>
+    <grid name="ocnice">tn0.25v3</grid>
+    <mask>tn0.25v3</mask>
+  </model_grid>
+
   <model_grid alias="f05_t12" not_compset="_MOM">
     <grid name="atm">0.47x0.63</grid>
     <grid name="lnd">0.47x0.63</grid>
@@ -721,6 +729,20 @@
     <grid name="lnd">0.47x0.63</grid>
     <grid name="ocnice">0.47x0.63</grid>
     <mask>gx1v7</mask>
+  </model_grid>
+
+  <model_grid alias="f05_f05_mn0253" not_compset="_MOM" >
+    <grid name="atm">0.47x0.63</grid>
+    <grid name="lnd">0.47x0.63</grid>
+    <grid name="ocnice">0.47x0.63</grid>
+    <mask>tn0.25v3</mask>
+  </model_grid>
+ 
+   <model_grid alias="f09_f09_mn0253" not_compset="_MOM" >
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">0.9x1.25</grid>
+    <mask>tn0.25v3</mask>
   </model_grid>
 
   <model_grid alias="f19_g16" not_compset="_MOM">
@@ -979,6 +1001,20 @@
     <mask>gx1v7</mask>
   </model_grid>
 
+  <model_grid alias="ne30_n13">
+    <grid name="atm">ne30np4</grid>
+    <grid name="lnd">ne30np4</grid>
+    <grid name="ocnice">tn1v3</grid>
+    <mask>tn1v3</mask>
+  </model_grid>
+
+  <model_grid alias="ne30_n0253">
+    <grid name="atm">ne30np4</grid>
+    <grid name="lnd">ne30np4</grid>
+    <grid name="ocnice">tn0.25v3</grid>
+    <mask>tn0.25v3</mask>
+  </model_grid>
+
   <model_grid alias="ne30pg3_g17" not_compset="_MOM">
     <grid name="atm">ne30np4.pg3</grid>
     <grid name="lnd">ne30np4.pg3</grid>
@@ -1001,6 +1037,20 @@
     <grid name="glc">ais8:gris4</grid>
     <grid name="wav">wgx3v7</grid>
     <mask>gx1v7</mask>
+  </model_grid>
+
+  <model_grid alias="ne30pg3_n13">
+    <grid name="atm">ne30np4.pg3</grid>
+    <grid name="lnd">ne30np4.pg3</grid>
+    <grid name="ocnice">tn1v3</grid>
+    <mask>tn1v3</mask>
+  </model_grid>
+
+  <model_grid alias="ne30pg3_n0253">
+    <grid name="atm">ne30np4.pg3</grid>
+    <grid name="lnd">ne30np4.pg3</grid>
+    <grid name="ocnice">tn0.25v3</grid>
+    <mask>tn0.25v3</mask>
   </model_grid>
 
   <model_grid alias="ne30pg3_t232">
@@ -1108,6 +1158,13 @@
     <grid name="lnd">ne60np4</grid>
     <grid name="ocnice">ne60np4</grid>
     <mask>gx1v6</mask>
+  </model_grid>
+
+  <model_grid alias="ne60_n0253" not_compset="_MOM">
+    <grid name="atm">ne60np4</grid>
+    <grid name="lnd">ne60np4</grid>
+    <grid name="ocnice">tn0.25v3</grid>
+    <mask>tn0.25v3</mask>
   </model_grid>
 
   <model_grid alias="ne120_g16" not_compset="_MOM">
@@ -1289,6 +1346,13 @@
     <grid name="lnd">ne30np4.pg3</grid>
     <grid name="ocnice">ne30np4.pg3</grid>
     <mask>tx2_3v2</mask>
+  </model_grid>
+
+  <model_grid alias="ne30pg3_ne30pg3_mn13" not_compset="_NEMO">
+    <grid name="atm">ne30np4.pg3</grid>
+    <grid name="lnd">ne30np4.pg3</grid>
+    <grid name="ocnice">ne30np4.pg3</grid>
+    <mask>tn1v3</mask>
   </model_grid>
 
   <model_grid alias="ne60pg3_ne60pg3_mg17" not_compset="_MOM|_CLM">
@@ -1749,6 +1813,46 @@
   <!-- The following grid is only used for ADWAV testing -->
   <model_grid alias="ww3a" compset="_WW3|DWAV">
     <grid name="wav">ww3a</grid>
+  </model_grid>
+
+  <model_grid alias="TL319_wtn14" not_compset="_CAM|_MOM|_POP|_NEMO">
+    <grid name="atm">TL319</grid>
+    <grid name="wav">wtnx1v4</grid>
+    <mask>wtnx1v4</mask>
+  </model_grid>  
+
+  <model_grid alias="TL319_w025" not_compset="_CAM|_MOM|_POP|_NEMO">
+    <grid name="atm">TL319</grid>
+    <grid name="wav">w025</grid>
+    <mask>w025</mask>
+  </model_grid>
+
+  <model_grid alias="TL639_w025" not_compset="_CAM|_MOM|_POP|_NEMO">
+    <grid name="atm">TL639</grid>
+    <grid name="wav">w025</grid>
+    <mask>w025</mask>
+  </model_grid>
+
+  <model_grid alias="T62_wtn14" not_compset="_CAM|_MOM|_POP|_NEMO">
+    <grid name="atm">T62</grid>
+    <grid name="wav">wtnx1v4</grid>
+    <mask>wtnx1v4</mask>
+  </model_grid>
+
+  <model_grid alias="T62_w025" not_compset="_CAM|_MOM|_POP|_NEMO">
+    <grid name="atm">T62</grid>
+    <grid name="wav">w025</grid>
+    <mask>w025</mask>
+  </model_grid>
+
+  <!-- CMCC-CM ww3 testing configurations WITH ocean-->
+
+  <model_grid alias="TL639_n0253_w025" not_compset="_CAM">
+    <grid name="atm">TL639</grid>
+    <grid name="ocnice">tn0.25v3</grid>
+    <grid name="wav">w025</grid>
+    <grid name="rof">JRA025</grid>
+    <mask>tn0.25v3</mask>
   </model_grid>
 
 </grids>

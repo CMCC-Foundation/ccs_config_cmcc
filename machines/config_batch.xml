@@ -114,9 +114,10 @@
     <directives>
       <directive                       > -J {{ job_id }} </directive>
       <directive                       > -n {{ total_tasks }} </directive>
+      <directive                       > -q $JOB_QUEUE </directive>
       <directive                       > -W $JOB_WALLCLOCK_TIME </directive>
-      <directive default="cesm.stdout" > -o {{ job_id }}.%J  </directive>
-      <directive default="cesm.stderr" > -e {{ job_id }}.%J  </directive>
+      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
+      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
     </directives>
   </batch_system>
 

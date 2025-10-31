@@ -1,0 +1,58 @@
+#!/usr/bin/bash -l
+{{ batchdirectives }}
+#. ~/.bashrc
+
+ulimit -s unlimited
+#
+# activate needed env
+which -a module >/dev/null 2>&1
+stat=$?
+if [ ${stat} -ne 0 ]; then
+  source /etc/profile.d/modules.sh
+fi
+
+module purge
+if [ -d /juno ]; then
+  module load --auto impi-2021.6.0/2021.6.0
+elif [ -d /cassandra ]; then
+  module load oneapi-2025.0.4/impi-2021.14.2/2021.14.2-e7cvt
+fi
+
+source ${HOME}/local/*/etc/profile.d/conda.sh
+conda deactivate
+conda activate cesm_build
+
+set -evx
+CASEROOT={{ caseroot }}
+cd $CASEROOT
+#get case name and cores dedicated to ocean model from xml files
+CASE=`./xmlquery CASE|cut -d ':' -f2|sed 's/ //g'`
+CIME_OUTPUT_ROOT=`./xmlquery CIME_OUTPUT_ROOT|cut -d ':' -f2|sed 's/ //g'`
+#
+conda deactivate
+conda activate py3cfmpich
+#
+flist=$(ls ${CIME_OUTPUT_ROOT}/archive/${CASE}/ocn/hist/${CASE}_*_0000.nc)
+years=$(echo "${flist}" | tail -1 | sed -e "s/^.*_[0-9][dmy]_\([0-9]\{8\}\)_\([0-9]\{8\}\)_.*\.nc/\1 \2/")
+for F_IN in ${flist} ; do
+  F_OUT=$(echo "${F_IN}" | sed -e "s/_0000\.nc/.nc/")
+  F_DEL=$(echo "${F_IN}" | sed -e "s/_0000\.nc/_[0-9][0-9][0-9][0-9].nc/")
+  F_DEL=$(eval ls ${F_DEL})
+  numdom=$(echo "${F_DEL}" | wc -w)
+# this should be independent from expID and general
+  mpirun -n ${LSB_DJOB_NUMPROC} python ${CONDA_PREFIX}/bin/nemo_rebuild -n ${numdom} -i ${F_IN} -o ${F_OUT}
+  stat=$?
+  #
+  echo "Rebuilt: ${F_OUT}"
+# if correctly merged remove single files
+  if [ $stat -eq 0 ]; then
+    rm ${F_DEL}
+  fi
+done
+
+cd ${CIME_OUTPUT_ROOT}/archive/${CASE} || exit 1
+if [ -f compress.sh ]; then
+  echo "${years}" > years.txt
+  bsub < compress.sh
+fi
+

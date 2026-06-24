@@ -289,6 +289,13 @@
     <mask>tn1v3</mask>
   </model_grid>
 
+  <model_grid alias="T62_n14" not_compset="_CAM">
+    <grid name="atm">T62</grid>
+    <grid name="lnd">T62</grid>
+    <grid name="ocnice">tn1v4</grid>
+    <mask>tn1v4</mask>
+  </model_grid>
+
   <model_grid alias="T62_n0253" not_compset="_CAM">
     <grid name="atm">T62</grid>
     <grid name="lnd">T62</grid>
@@ -462,6 +469,13 @@
     <mask>tn1v3</mask>
   </model_grid>
 
+  <model_grid alias="f02_n14">
+    <grid name="atm">0.23x0.31</grid>
+    <grid name="lnd">0.23x0.31</grid>
+    <grid name="ocnice">tn1v4</grid>
+    <mask>tn1v4</mask>
+  </model_grid>
+
   <model_grid alias="f02_n0253">
     <grid name="atm">0.23x0.31</grid>
     <grid name="lnd">0.23x0.31</grid>
@@ -523,6 +537,13 @@
     <grid name="lnd">0.9x1.25</grid>
     <grid name="ocnice">tn1v3</grid>
     <mask>tn1v3</mask>
+  </model_grid>
+
+  <model_grid alias="f09_n14">
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">tn1v4</grid>
+    <mask>tn1v4</mask>
   </model_grid>
 
   <model_grid alias="f09_n0253">
@@ -861,6 +882,13 @@
     <mask>tn1v3</mask>
   </model_grid>
 
+  <model_grid alias="ne30_n14">
+    <grid name="atm">ne30np4</grid>
+    <grid name="lnd">ne30np4</grid>
+    <grid name="ocnice">tn1v4</grid>
+    <mask>tn1v4</mask>
+  </model_grid>
+
   <model_grid alias="ne30_n0253">
     <grid name="atm">ne30np4</grid>
     <grid name="lnd">ne30np4</grid>
@@ -880,6 +908,13 @@
     <grid name="lnd">ne30np4.pg3</grid>
     <grid name="ocnice">tn1v3</grid>
     <mask>tn1v3</mask>
+  </model_grid>
+
+  <model_grid alias="ne30pg3_n14">
+    <grid name="atm">ne30np4.pg3</grid>
+    <grid name="lnd">ne30np4.pg3</grid>
+    <grid name="ocnice">tn1v4</grid>
+    <mask>tn1v4</mask>
   </model_grid>
 
   <model_grid alias="ne30pg3_n0253">
@@ -1121,6 +1156,13 @@
     <grid name="lnd">ne30np4.pg3</grid>
     <grid name="ocnice">ne30np4.pg3</grid>
     <mask>tn1v3</mask>
+  </model_grid>
+
+  <model_grid alias="ne30pg3_ne30pg3_mn14" not_compset="_NEMO">
+    <grid name="atm">ne30np4.pg3</grid>
+    <grid name="lnd">ne30np4.pg3</grid>
+    <grid name="ocnice">ne30np4.pg3</grid>
+    <mask>tn1v4</mask>
   </model_grid>
 
   <model_grid alias="ne60pg3_ne60pg3_mg17" not_compset="_POP|_CLM">

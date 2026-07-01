@@ -130,8 +130,8 @@
     <directives>
       <directive                       > -J {{ job_id }} </directive>
       <directive                       > -n {{ total_tasks }} </directive>
-      <directive default="logs/cesm.log" > -o {{ job_id }}   </directive>
-      <directive default="logs/cesm.log" > -e {{ job_id }}   </directive>
+      <directive default="logs/" > -o {{ job_id }}   </directive>
+      <directive default="logs/" > -e {{ job_id }}   </directive>
     </directives>
   </batch_system>
 
